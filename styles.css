@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #1f1f1f;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s, transform 1s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu Items */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-item {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.5);
+}
+
+.menu-item img, .gallery-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Gallery */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Form */
+form {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+form input, form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: background 0.3s;
+}
+
+form button {
+    background: #ff6600;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #e65c00;
+}
+
+/* Footer */
+footer {
+    background: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    margin: 10px;
+}
+
+/* Social Media Floating Icons */
+.social-icons {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-container, .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
